@@ -1,26 +1,28 @@
-let customerName = "bob";
-
-function returnCustomerName() {
-  return customerName;
-}
+let customerName = 'bob';
+let bestCustomer;
+const leastFavoriteCustomer = 'not bob';
 
 function upperCaseCustomerName() {
   customerName = customerName.toUpperCase();
 }
 
-let bestCustomer = "initial best customer";
-
 function setBestCustomer() {
-  bestCustomer = "not bob";
+  bestCustomer = 'not bob';
 }
 
 function overwriteBestCustomer() {
-  bestCustomer = "maybe bob";
+  bestCustomer = 'maybe bob';
 }
 
-const leastFavoriteCustomer = "initial least favorite customer";
-
-function attemptLeastFavoriteCustomerChange() {
-  leastFavoriteCustomer = "new least favorite customer";
-  // This will result in an error because const variables cannot be reassigned
+function changeLeastFavoriteCustomer() {
+  leastFavoriteCustomer = 'bob';
 }
+
+module.exports = {
+  customerName,
+  leastFavoriteCustomer,
+  upperCaseCustomerName,
+  setBestCustomer,
+  overwriteBestCustomer,
+  changeLeastFavoriteCustomer
+};
